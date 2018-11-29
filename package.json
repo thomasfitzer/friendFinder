@@ -5,6 +5,7 @@
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "circular-json": "^0.5.9",
     "express": "^4.16.4",
     "path": "^0.12.7"
   },

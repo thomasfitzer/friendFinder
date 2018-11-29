@@ -1,221 +1,238 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <!-- materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <!-- materialize icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <title>Friend Finder</title>
 </head>
+
 <body>
-    <div class="container">
-        <h3>Poll Questions</h3>
-
-        <hr>
-
-        <h4>Your Info</h4>
-        <h5>Moniker (Required)</h5>
-        <input type="text" id="moniker" class="form-control" required>
-
-        <h5>Portrait Link (Required)</h5>
-        <input type="text" id="portrait" class="form-control" required>
-
-        <hr>
-
-        <h4>Query 1</h4>
-        <h5>I use the "Electoral College" to make all of my decisions.</h5>
-        <select class="query-answer" id="q1">
-            <option value=""></option>
-            <option value="1">1 (I Never!)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (It is My Life Blood)</option>
-          </select>
-
-          <h4>Query 2</h4>
-        <h5>I sort my friends into "Executive", "Legislative", and "Judicial" branches.</h5>
-        <select class="query-answer" id="q2">
-            <option value=""></option>
-            <option value="1">1 (I Never!)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (It is My Life Blood)</option>
-          </select>
-
-          <h4>Query 3</h4>
-        <h5>I make executive decisions at work, citing my possession of a "mandate".</h5>
-        <select class="query-answer" id="q3">
-            <option value=""></option>
-            <option value="1">1 (I Never!)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (It is My Life Blood)</option>
-          </select>
-
-          <h4>Query 4</h4>
-        <h5>I refer to my car as, "Air Force One".</h5>
-        <select class="query-answer" id="q4">
-            <option value=""></option>
-            <option value="1">1 (I Never!)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (It is My Life Blood)</option>
-          </select>
-
-          <h4>Query 5</h4>
-        <h5>I refer to getting a loan as, "soliciting campaign donations".</h5>
-        <select class="query-answer" id="q5">
-            <option value=""></option>
-            <option value="1">1 (I Never!)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (It is My Life Blood)</option>
-          </select>
-
-          <h4>Query 6</h4>
-        <h5>Whenever I go out with my friends, I refer to them as, "The Secret Service," and make
-            them refer to me by my codename, "Cobra One".</h5>
-        <select class="query-answer" id="q6">
-            <option value=""></option>
-            <option value="1">1 (I Never!)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (It is My Life Blood)</option>
-          </select>
-
-          <h4>Query 7</h4>
-        <h5>Any future plans I have are called, "Manifest Destiny".</h5>
-        <select class="query-answer" id="q7">
-            <option value=""></option>
-            <option value="1">1 (I Never!)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (It is My Life Blood)</option>
-          </select>
-
-          <h4>Query 8</h4>
-        <h5>I refer to my significant other as my, "running mate".</h5>
-        <select class="query-answer" id="q8">
-            <option value=""></option>
-            <option value="1">1 (I Never!)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (It is My Life Blood)</option>
-          </select>
-
-          <h4>Query 9</h4>
-        <h5>Any place I live is referred to as, "The White House".</h5>
-        <select class="query-answer" id="q9">
-            <option value=""></option>
-            <option value="1">1 (I Never!)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (It is My Life Blood)</option>
-          </select>
-
-          <h4>Query 10</h4>
-        <h5>My DVD collection is known as, "The Presidential Library".</h5>
-        <select class="query-answer" id="q10">
-            <option value=""></option>
-            <option value="1">1 (I Never!)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (It is My Life Blood)</option>
-          </select>
-
-          <br>
-          
-          <button type="submit" id="submitButton">Submit</button>
-
-          <hr>
-
-          <footer class="footer">
-            <div class="container">
-                <p><a href="/app/data/friends.js">Friends API</a> | <a href="">INSERT HEROKU LINK</a></p>
+    <div class='container'>
+        <div class='card-panel blue darken-1 col s12 center-align'>
+            <h4><strong>Survey Questions</strong></h4>
+            <div class='card-panel left-align white'>
+                <h5><strong>About You</strong></h5>
+                <br>
+                <input id="name" type="text" class="validate" required>
+                <label class='active' for="name">Name (required)</label>
+                <input id="photo" type="text" class="validate" required>
+                <label class='active' for="name">Link to Photo Image (required)</label>
+                <h5><strong>Question 1</strong></h5>
+                <p>I use the "Electoral College" to make all of my decisions..</p>
+                <select data-placeholder="" class="browser-default" id="q1">
+                    <option value="">Choose an option</option>
+                    <option value="1">1 (I Can Neither Confirm Nor Deny This)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (The Administration Confirms This)</option>
+                </select>
+                <h5><strong>Question 2</strong></h5>
+                <p>I sort my friends into "Executive", "Legislative", and "Judicial" branches.</p>
+                <select data-placeholder="" class="browser-default" id="q2">
+                    <option value="">Choose an option</option>
+                    <option value="1">1 (I Can Neither Confirm Nor Deny This)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (The Administration Confirms This)</option>
+                </select>
+                <h5><strong>Question 3</strong></h5>
+                <p>I make executive decisions at work, citing my possession of a "mandate".</p>
+                <select data-placeholder="" class="browser-default" id="q3">
+                    <option value="">Choose an option</option>
+                    <option value="1">1 (I Can Neither Confirm Nor Deny This)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (The Administration Confirms This)</option>
+                </select>
+                <h5><strong>Question 4</strong></h5>
+                <p>I refer to my car as, "Air Force One".</p>
+                <select data-placeholder="" class="browser-default" id="q4">
+                    <option value="">Choose an option</option>
+                    <option value="1">1 (I Can Neither Confirm Nor Deny This)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (The Administration Confirms This)</option>
+                </select>
+                <h5><strong>Question 5</strong></h5>
+                <p>I refer to getting a loan as, "soliciting campaign donations".</p>
+                <select data-placeholder="" class="browser-default" id="q5">
+                    <option value="">Choose an option</option>
+                    <option value="1">1 (I Can Neither Confirm Nor Deny This)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (The Administration Confirms This)</option>
+                </select>
+                <h5><strong>Question 6</strong></h5>
+                <p>Whenever I go out with my friends, I refer to them as, "The Secret Service," and make
+                    them refer to me by my codename, "Cobra One".</p>
+                <select data-placeholder="" class="browser-default" id="q6">
+                    <option value="">Choose an Option</option>
+                    <option value="1">1 (I Can Neither Confirm Nor Deny This)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (The Administration Confirms This)</option>
+                </select>
+                <h5><strong>Question 7</strong></h5>
+                <p>Any future plans I have are called, "Manifest Destiny".</p>
+                <select data-placeholder="" class="browser-default" id="q7">
+                    <option value="">Choose an option</option>
+                    <option value="1">1 (I Can Neither Confirm Nor Deny This)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (The Administration Confirms This)</option>
+                </select>
+                <h5><strong>Question 8</strong></h5>
+                <p>I refer to my significant other as my, "running mate".</p>
+                <select data-placeholder="" class="browser-default" id="q8">
+                    <option value="">Choose an option</option>
+                    <option value="1">1 (I Can Neither Confirm Nor Deny This)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (The Administration Confirms This)</option>
+                </select>
+                <h5><strong>Question 9</strong></h5>
+                <p>Any place I live is referred to as, "The White House".</p>
+                <select data-placeholder="" class="browser-default" id="q9">
+                    <option value="">Choose an option</option>
+                    <option value="1">1 (I Can Neither Confirm Nor Deny This)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (The Administration Confirms This)</option>
+                </select>
+                <h5><strong>Question 10</strong></h5>
+                <p>My DVD collection is known as, "The Presidential Library".</p>
+                <select data-placeholder="" class="browser-default" id="q10">
+                    <option value="">Choose an option</option>
+                    <option value="1">1 (I Can Neither Confirm Nor Deny This)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (The Administration Confirms This)</option>
+                </select>
+                <br>
+                <!-- Materialize Modal Trigger/Submit Button -->
+                <button type ="submit" data-target="modal1" class="waves-effect waves-light btn modal-trigger blue lighten-1" id="submitBtn">Submit</button>
             </div>
-        </footer>
-    </div>
-
-    <div id="results-modal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"></button>
-                    <h3 class="modal-title">Best Match</h3>
-                </div>
-            
-                <div class="modal-body">
-                    <h3 id="pres-name"></h3>
-                    <img id="match-pic">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
         </div>
+        <div class='col s4'>
+            <p><a href='/api/friends'>API Friends List</a> | <a href='https://github.com/thomasfitzer/friendFinder' target='_blank'>GitHub Repo</a></p>
+        </div>
+
+        <!-- Materialize Modal Structure -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Meet Your New Commander-in-Chief!</h4>
+            <h5 id="matchName"></h5>
+            <img id="matchPic" src="" alt="No Image" width = 250px>
+          </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-red btn-flat">Done</a>
+        </div>
+      </div>
+
     </div>
 
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('select').material_select();
-            $('.modal fade').modal({
-                dismissible: false,
-                opacity: 6,
-                inDuration: 400,
-                outDuration: 150,
-                startingTop: '6%',
-                endingTop: '13%'
+<!-- Grabs information and sends it to server -->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#submitBtn").on("click", function() {
+        //form validation
+        function validateForm() {
+            var isValid = true;
+            $('.validate').each(function() {
+                if ($(this).val() === ''){
+                    isValid = false;
+                }
             });
-        });
-    $('#submitButton').on('click', function(event){
-        event.preventDefault();
-        var customerInput = {
-            name: $('#moniker').val().trim(),
-            photo: $('#portrait').val().trim(),
-            scores:[
-                $('#q1').val().trim(),
-                $('#q2').val().trim(),
-                $('#q3').val().trim(),
-                $('#q4').val().trim(),
-                $('#q5').val().trim(),
-                $('#q6').val().trim(),
-                $('#q7').val().trim(),
-                $('#q8').val().trim(),
-                $('#q9').val().trim(),
-                $('#q10').val().trim()
-            ]
-        };
-        
-        $.post('/api/friends', userInput)
-          .done(function(data) {
-              
-              $('#pres-name').html(data.matchName);
-            $("#match-pic").attr("src", data.matchImage);
+            $('.browser-default').each(function() {
+                if ($(this).val() === ""){
+                    isValid = false;
+                }
+            });
+            return isValid;
+        }
+        //if everything is filled
+        if (validateForm()) {
+            //creates a new friend from the values submitted
+            var newFriend = {
+                name: $('#name').val().trim(),
+                profilePic: $('#photo').val().trim(),
+                scores: [
+                    $('#q1').val(),
+                    $('#q2').val(),
+                    $('#q3').val(),
+                    $('#q4').val(),
+                    $('#q5').val(),
+                    $('#q6').val(),
+                    $('#q7').val(),
+                    $('#q8').val(),
+                    $('#q9').val(),
+                    $('#q10').val(),
+                ]
+            };
+            //Grabs current URL of website
+            var currentURL = window.location.origin;
+            //AJAX posts the data to friends API.
+            function clear() {
+                $('#name').val("");
+                $('#photo').val("");
+                $('#q1').val("");
+                $('#q2').val("");
+                $('#q3').val("");
+                $('#q4').val("");
+                $('#q5').val("");
+                $('#q6').val("");
+                $('#q7').val("");
+                $('#q8').val("");
+                $('#q9').val("");
+                $('#q10').val("");
+                alert('clearing')
+            }
+            $.post(currentURL + "/api/friends", newFriend, function(data) {
+                alert('inside post')
+                        //Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                        $("#matchName").text(data.name);
+                        $("#matchPic").attr('src', data.photo)
+                        clear()
+                        // alert('about to show modal')
+                        $('#modal1').modal();
+
+                    });
             
-              $('#results-modal').modal('open');
-          });
+            // Show the modal with the best match
+                
+            //clear form after submission
 
+        } else {
+            alert("Please fill out ALL fields before submitting survey!")
+        }
+        // return false;
     });
-   
-
-    
-    </script>
+});
+</script>
 </body>
-</html>
 
+</html>
 
 
 

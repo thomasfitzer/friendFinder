@@ -1,0 +1,23 @@
+heroku how to
+
+to remove a remote
+
+    git rm remote someremote
+
+
+heroku open (open heroku app)
+git remote -v (shows remote)
+
+deploy to heroku
+(be in working directory)
+heroku create
+git push heroku master
+
+heroku logs (will print out a heroku log)
+heroku logs --tail (monitors app in real time)
+
+jaws
+
+cmd line
+
+heroku addons:create jawsdb 

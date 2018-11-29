@@ -1,48 +1,47 @@
-var path = require('path');
+var friendsArray = require('../data/friends.js');
 
-var matches = require('path');
+module.exports = function(app){
+  //a GET route that displays JSON of all possible friends
+  app.get('/api/friends', function(req,res){
+    res.json(friendsArray);
+  });
 
-module.exports = function(app) {
-    console.log("Module successfully exported.");
+  app.post('/api/friends', function(req,res){
+    //grabs the new friend's scores to compare with friends in friendList array
+    var newFriendScores = req.body.scores;
+    var scoresArray = [];
+    var friendCount = 0;
+    var bestMatch = 0;
 
-    app.get('/api/friends', function(req, res) {
-        res.json(matches);
-    });
+    //runs through all current friends in list
+    for(var i=0; i<friendsArray.length; i++){
+      var scoresDiff = 0;
+      //run through scores to compare friends
+      for(var j=0; j<newFriendScores.length; j++){
+        scoresDiff += (Math.abs(parseInt(friendsArray[i].scores[j]) - parseInt(newFriendScores[j])));
+      }
 
-    app.post('/api/friends', function (req,res){
-        var customerInput = req.body;
-        
+      //push results into scoresArray
+      scoresArray.push(scoresDiff);
+    }
 
-        var customerResponses = customerInput.scores;
-        
+    //after all friends are compared, find best match
+    for(var i=0; i<scoresArray.length; i++){
+      if(scoresArray[i] <= scoresArray[bestMatch]){
+        bestMatch = i;
+      }
+    }
 
-        var matchMoniker = '';
-        var matchPic = '';
-        var bigDiff = 5000;
+    //return bestMatch data
+    var bff = friendsArray[bestMatch];
+    friendsArray.push(req.body);
 
-        for (var i = 0; i < matches.length; i++) {
-           
+    console.log(bff)
+    res.json(bff);
 
-            var diff = 0;
-            for (var m = 0; m <customerResponses.length; m++) {
-                diff += Math.abs(matches[i].scores[m] - customerResponses[m]);
-            }
-            if (diff < bigDiff) {
-                console.log("Best match located = " + diff);
-                console.log("Friend moniker = " + matches[i].name);
-                console.log("Friend pic = " + matches[i].photo);
-
-                totalDiff = diff;
-                matchMoniker = matches[i].name;
-                matchPic = matches[i].photo;
-            }
-        }
-        matches.push(customerInput);
-
-        res.json({status: "Okeedokee", matchMoniker: matchMoniker, matchPic: matchPic})
-    });
+    //pushes new submission into the friendsList array
+  });
 };
-
 
 
 
