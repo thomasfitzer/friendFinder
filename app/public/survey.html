@@ -13,7 +13,7 @@
        <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <title>Friend Finder</title>
 </head>
 
@@ -131,7 +131,7 @@
                 </select>
                 <br>
                 <!-- Materialize Modal Trigger/Submit Button -->
-                <button type ="submit" data-target="modal1" class="waves-effect waves-light btn modal-trigger blue lighten-1" id="submitBtn">Submit</button>
+                <button type ="submit" class="waves-effect waves-light btn modal-trigger blue lighten-1" id="submitBtn">Submit</button>
             </div>
         </div>
         <div class='col s4'>
@@ -156,6 +156,7 @@
 <script type="text/javascript">
 $(document).ready(function() {
     $("#submitBtn").on("click", function() {
+        $('#modal1').modal()
         //form validation
         function validateForm() {
             var isValid = true;
@@ -206,17 +207,15 @@ $(document).ready(function() {
                 $('#q8').val("");
                 $('#q9').val("");
                 $('#q10').val("");
-                alert('clearing')
             }
             $.post(currentURL + "/api/friends", newFriend, function(data) {
-                alert('inside post')
                         //Grab the result from the AJAX post so that the best match's name and photo are displayed.
                         $("#matchName").text(data.name);
                         $("#matchPic").attr('src', data.photo)
                         clear()
                         // alert('about to show modal')
-                        $('#modal1').modal();
 
+                        M.Modal.getInstance(document.getElementById('modal1')).open()
                     });
             
             // Show the modal with the best match
@@ -233,7 +232,6 @@ $(document).ready(function() {
 </body>
 
 </html>
-
 
 
 

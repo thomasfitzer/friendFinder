@@ -2,7 +2,7 @@ var friendsArray = [
 	{
 		name: "Barry",
 		photo: "https://upload.wikimedia.org/wikipedia/commons/8/8d/President_Barack_Obama.jpg",
-		scores: [5, 3, 1, 4, 2, 3, 1, 5, 5, 2]
+		scores: [4, 2, 1, 4, 3, 3, 1, 1, 5, 4]
     },
     {
 		name: "Abe",
@@ -12,7 +12,7 @@ var friendsArray = [
     {
 		name: "Ricky",
 		photo: "https://en.wikipedia.org/wiki/Richard_Nixon#/media/File:Richard_M._Nixon,_ca._1935_-_1982_-_NARA_-_530679.jpg",
-		scores: [5, 3, 1, 4, 2, 3, 1, 5, 5, 2]
+		scores: [1, 3, 4, 4, 5, 5, 5, 5, 1, 2]
     },
     {
 		name: "Don",
